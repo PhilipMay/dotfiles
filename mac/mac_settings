@@ -18,4 +18,5 @@ alias _backup_cleanup_cache="resticprofile cache --cleanup"
 # brew
 alias _brew_update="brew update && brew upgrade -y"
 alias _brew_cleanup="brew autoremove && brew cleanup --prune=all"
-alias _brew_leaves="brew leaves"
+alias _brew_list="echo \"== Formulae ==\"; brew leaves; echo; echo \"== Casks ==\"; brew list --cask"
+alias _brew_uninstall="brew uninstall --zap"
