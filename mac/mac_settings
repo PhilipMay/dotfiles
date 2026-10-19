@@ -1,0 +1,24 @@
+# Prompt(PS1)
+export PS1="\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "
+
+# ls
+alias ls="ls -Gh"
+alias ll="ls -l"
+alias la="ll -A"
+
+# restic backup
+alias _backup="resticprofile backup"
+alias _backup_snapshots="resticprofile snapshots"
+alias _backup_unlock="resticprofile unlock"
+alias _backup_check="resticprofile check"
+alias _backup_prune_forget="resticprofile prune && resticprofile forget"
+alias _backup_stats="resticprofile stats"
+alias _backup_cleanup_cache="resticprofile cache --cleanup"
+
+# server backup
+alias _hs02_backup="ssh hs02 'tar czf - -C /etc nixos' > ~/backup/hs02-nixos/hs02-nixos-$(date +%Y%m%d-%H%M%S).tgz"
+
+# brew
+alias _brew_update="brew update && brew upgrade -y"
+alias _brew_cleanup="brew autoremove && brew cleanup --prune=all"
+alias _brew_leaves="brew leaves"
