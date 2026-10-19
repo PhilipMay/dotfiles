@@ -15,9 +15,6 @@ alias _backup_prune_forget="resticprofile prune && resticprofile forget"
 alias _backup_stats="resticprofile stats"
 alias _backup_cleanup_cache="resticprofile cache --cleanup"
 
-# server backup
-alias _hs02_backup="ssh hs02 'tar czf - -C /etc nixos' > ~/backup/hs02-nixos/hs02-nixos-$(date +%Y%m%d-%H%M%S).tgz"
-
 # brew
 alias _brew_update="brew update && brew upgrade -y"
 alias _brew_cleanup="brew autoremove && brew cleanup --prune=all"

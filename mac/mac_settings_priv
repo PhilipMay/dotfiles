@@ -1,0 +1,2 @@
+# server backup
+alias _hs02_backup="ssh hs02 'tar czf - -C /etc nixos' > ~/backup/hs02-nixos/hs02-nixos-$(date +%Y%m%d-%H%M%S).tgz"
