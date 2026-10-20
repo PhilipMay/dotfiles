@@ -14,6 +14,7 @@ alias _backup_check="resticprofile check"
 alias _backup_prune_forget="resticprofile prune && resticprofile forget"
 alias _backup_stats="resticprofile stats"
 alias _backup_cleanup_cache="resticprofile cache --cleanup"
+alias _backup_dry="resticprofile backup --dry-run --verbose=2 | grep -v '^unchanged '"
 
 # brew
 alias _brew_update="brew update && brew upgrade -y"
