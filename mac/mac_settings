@@ -19,5 +19,6 @@ alias _backup_dry="resticprofile backup --dry-run --verbose=2 | grep -v '^unchan
 # brew
 alias _brew_update="brew update && brew upgrade -y"
 alias _brew_cleanup="brew autoremove && brew cleanup --prune=all"
+alias _brew_update_cleanup="_brew_update && _brew_cleanup"
 alias _brew_list="echo \"== Formulae ==\"; brew leaves; echo; echo \"== Casks ==\"; brew list --cask"
 alias _brew_uninstall="brew uninstall --zap"
